@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Property Easement Checker: Satellite and Easement Image Overlay Tool
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Property Easement Checker</h1>
+      <p>
+        Use this tool to check if a property you're considering has easement
+        issues.
+      </p>
+      <div class="instructions">
+        <h2>How to Use This Tool</h2>
+        <ol>
+          <li>Upload two images: a satellite image and an easement image.</li>
+          <li>
+            Match features on both images:
+            <ul>
+              <li>
+                Find a recognizable spot (like a corner or intersection) on the
+                satellite image.
+              </li>
+              <li>Click on that spot.</li>
+              <li>
+                Find the same spot on the easement image and click it there too.
+              </li>
+              <li>
+                Repeat this process at least 3 times with different spots.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If you make a mistake, use the "Clear Points" buttons to start over.
+          </li>
+          <li>
+            Once you've matched at least 3 spots, click the "Process Images"
+            button.
+          </li>
+          <li>
+            The tool will combine the images, showing the easement overlay on
+            the satellite image.
+          </li>
+        </ol>
+      </div>
+      <div class="input-section">
+        <div class="image-input">
+          <h2>Satellite Image</h2>
+          <input type="file" id="satelliteInput" accept="image/*" />
+          <canvas id="satelliteCanvas"></canvas>
+          <button id="clearSatellitePoints">Clear Points</button>
+        </div>
+        <div class="image-input">
+          <h2>Easement Image</h2>
+          <input type="file" id="easementInput" accept="image/*" />
+          <canvas id="easementCanvas"></canvas>
+          <button id="clearEasementPoints">Clear Points</button>
+        </div>
+      </div>
+      <button id="processButton">Process Images</button>
+      <div class="output-section">
+        <h2>Result</h2>
+        <div id="resultImage"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      window.onload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </body>
+</html>

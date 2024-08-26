@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-input {
+  width: 100%;
+}
+
+canvas {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.output-section {
+  margin-top: 20px;
+}
+
+#resultImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.instructions ul {
+  padding-left: 20px;
+}
+
+.instructions ul li {
+  margin-bottom: 5px;
+}
